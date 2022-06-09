@@ -1,0 +1,85 @@
+.optionBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    gap :25px;
+    flex: 1 1 auto;
+}
+button{
+    padding: 50px;
+    border : none;
+    border-radius: 10%;
+    font-size: 25px;
+    
+    color : white;
+    background-color: coral;
+    
+  
+}
+button img{
+    width:150px;
+}
+button:hover{
+    transform: scale(1.1);
+    box-shadow:  white;
+    transition: 0.1s;   
+    box-shadow: 0 0 20px 1px white;
+}
+
+button:active{
+    transform: scale(1.05);
+    
+
+}
+.scores{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h2, h1{
+    color :white;
+    justify-content: center;
+    text-align: center;
+}
+#result{
+    display: flex;
+    color:white;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.winner{
+    color:white;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    height: 150px;
+}
+body{
+    background-color: darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+.header{
+    font-size: 100px;
+    font-weight: 700px;
+    text-align: center;
+    color:white;
+}
+#reset{   
+    box-shadow: none;
+    background-color: transparent;
+    padding:10px;
+    width:100px;
+ }
+.reset{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
