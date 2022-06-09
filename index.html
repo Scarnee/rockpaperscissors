@@ -5,71 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src = 'js-file.js' defer></script>
+    <link rel="stylesheet" href = 'styles.css'>
 </head>
 <body>
+    <div class="header">Game of Rock, Paper, Scissors</div>
     
+    <div class="optionBtn">
+        <button id="rock"><img src="pictures/rock.png" alt="Rock" id="rock"></button>
+        <button id="paper"><img src="pictures/paper.png" alt="Paper" id="paper"></button>
+        <button id="scissors"><img src="pictures/scissors.png" alt="Scissors" id="scissors"></button>
+    </div>
+    <div id="result"> </div>
+    <div class="scores">
+        <div class="playerScore">
+            <h1>Player Score is</h1>
+            <h2>0</h2>
+        </div>
+        <div class="computerScore">
+            <h1>Computer Score is</h1>
+            <h2>0</h2>
+        </div>
+    </div>
+    <div class="winner"></div>
+    <div class="reset">
+        <button id="reset">Reset</button>
+    </div>
 </body>
-<script>
-    let options = ['rock', 'paper','scissors'];
-    
-    
-    let playerWin = 0
-    let compuWin = 0
-    
-    
-    
-    function play(){
-        
-        let playerSelection = prompt('Choice ?').toLowerCase();
-        let computerSelection = options[Math.floor(Math.random()*options.length)]
-        if (options.indexOf(playerSelection)<0){
-            console.log('not an option')
-            i--
-        }
-          
-        
-        else if (playerSelection === computerSelection){
-            console.log('Player ' + playerSelection)
-            console.log('Compu ' + computerSelection)
-            console.log('Its a tie')
-            
-        }
-        else if ((playerSelection==='rock'&& computerSelection==='paper') || (playerSelection==='paper'&&computerSelection==='scissors') || (playerSelection==='scissors' && computerSelection ==='rock')){
-            console.log('Player ' + playerSelection)
-            console.log('Compu ' + computerSelection)
-            console.log('You lose ! ' + computerSelection.charAt(0).toUpperCase() +computerSelection.slice(1)+ ' beats '+playerSelection.charAt(0).toUpperCase()+playerSelection.slice(1))
-            compuWin++
-        }
-        else{
-            console.log('Player ' + playerSelection)
-            console.log('Compu ' + computerSelection)
-            console.log ('You win ! '+  playerSelection.charAt(0).toUpperCase() +playerSelection.slice(1)+ ' beats '+computerSelection.charAt(0).toUpperCase()+computerSelection.slice(1))
-            playerWin++
-            
-        }
-        }
-    function game(){
-            for (i=1;i<6;i++){
-                play()
-                
-                console.log('Player Wins = ' + playerWin);
-                console.log('Computer Wins = '+compuWin);
-                console.log('Round played = '+i)
-            }
-            }
-        
-    
-    game()
-    if (playerWin>compuWin){
-        console.log('Player Win !');
-    }
-    else if (compuWin>playerWin){
-        console.log('Computer Win !')
-    }
-    else {
-        console.log('Its a tie !')
-    }
-    
-    
-</script>
+
 </html>
